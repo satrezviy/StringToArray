@@ -6,14 +6,15 @@ string sInput = "";
 wstring wInput = L"Profile";
 
 void Convert(string &s);
-void Convert(wstring w);
+void Convert(wstring &w);
 
 int main() {
-	//Convert(sInput);
+	Convert(sInput);
 	Convert(wInput);
 }
 
 void Convert(string &s) {
+	if (s.empty()) return;
 	string res = "{ ";
 	for (size_t i = 0; i < s.size(); i++) {
 		string temp = "'";
@@ -25,7 +26,8 @@ void Convert(string &s) {
 	res += "'\\0' }";
 	cout << res << "\n";
 }
-void Convert(wstring w) {
+void Convert(wstring &w) {
+	if (w.empty()) return;
 	wstring res = L"{ ";
 	for (size_t i = 0; i < w.size(); i++) {
 		wstring temp = L"L'";
