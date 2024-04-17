@@ -22,8 +22,8 @@ void Convert(string &s) {
 		temp += "', ";
 		res += temp;
 	}
-	res[res.size() - 2] = ' ';
-	res[res.size() - 1] = '}';
+	res += "'\\0' }";
+
 	cout << res << "\n";
 }
 void Convert(wstring w) {
@@ -35,7 +35,7 @@ void Convert(wstring w) {
 		temp += L"', ";
 		res += temp;
 	}
-	res[res.size() - 2] = L' ';
-	res[res.size() - 1] = L'}';
+	res += L"L'\\0' }";
+
 	wcout << res << L"\n";
 }
