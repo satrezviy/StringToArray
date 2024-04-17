@@ -26,6 +26,7 @@ void Convert(string &s) {
 	res += "'\\0' }";
 	cout << res << "\n";
 }
+
 void Convert(wstring &w) {
 	if (w.empty()) return;
 	wstring res = L"{ ";
