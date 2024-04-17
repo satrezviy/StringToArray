@@ -23,7 +23,6 @@ void Convert(string &s) {
 		res += temp;
 	}
 	res += "'\\0' }";
-
 	cout << res << "\n";
 }
 void Convert(wstring w) {
@@ -36,6 +35,5 @@ void Convert(wstring w) {
 		res += temp;
 	}
 	res += L"L'\\0' }";
-
 	wcout << res << L"\n";
 }
